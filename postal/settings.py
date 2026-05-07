@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-20c6nms#0l$q_h7)le%^gtz$6rjauf&h73jzgf-rw-iknzcrm!
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -145,3 +145,6 @@ REST_FRAMEWORK = {
 }
 }
 AUTH_USER_MODEL = 'accounts.User'
+import os
+SECRET_KEY = os.environ.get('SECRET_KEY', 'django-insecure-20c6nms#0l$q_h7)le%^gtz$6rjauf&h73jzgf-rw-iknzcrm!')
+DEBUG = os.environ.get('DEBUG', 'False') == 'True'
