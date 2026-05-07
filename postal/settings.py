@@ -131,5 +131,13 @@ REST_FRAMEWORK = {
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
     'PAGE_SIZE': 10,
     'EXCEPTION_HANDLER': 'postal.exceptions.custom_exception_handler',
+    'DEFAULT_THROTTLE_CLASSES': [
+    'rest_framework.throttling.UserRateThrottle',
+    'rest_framework.throttling.AnonRateThrottle',
+    ],
+    'DEFAULT_THROTTLE_RATES': {
+    'user': '1000/day',
+    'anon': '10/hour',
+}
 }
 AUTH_USER_MODEL = 'accounts.User'
