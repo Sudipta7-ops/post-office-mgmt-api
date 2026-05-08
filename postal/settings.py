@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'booking.apps.BookingConfig',
     'django_filters',
     'accounts',
+    'delivery'
 
 ]
 
