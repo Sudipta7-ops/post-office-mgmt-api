@@ -148,3 +148,4 @@ REST_FRAMEWORK = {
 AUTH_USER_MODEL = 'accounts.User'
 SECRET_KEY = os.environ.get('SECRET_KEY', 'django-insecure-20c6nms#0l$q_h7)le%^gtz$6rjauf&h73jzgf-rw-iknzcrm!')
 DEBUG = os.environ.get('DEBUG', 'False') == 'True'
+
