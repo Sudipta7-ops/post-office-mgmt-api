@@ -6,7 +6,7 @@ class DeliveryArticleSerializer(serializers.ModelSerializer):
     class Meta:
         model = DeliveryArticle
         fields = '__all__'
-        read_only_fields = ['scanned_at', 'delivery_boy','clsclsbag']
+        read_only_fields = ['scanned_at', 'delivery_boy','bag']
 
 
 class BagSerializer(serializers.ModelSerializer):
