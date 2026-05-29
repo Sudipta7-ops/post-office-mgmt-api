@@ -2,7 +2,7 @@
 
 A production-level REST API for managing Indian Post Office operations, built with Django REST Framework. Designed by an active ABPM (Assistant Branch Post Master) based on real daily post office workflows.
 
-🔗 **Live API:** https://post-office-mgmt-api.onrender.com/api/v1/bookings/  
+🔗 **Live API:** https://post-office-mgmt-api.onrender.com
 📁 **GitHub:** https://github.com/Sudipta7-ops/post-office-mgmt-api
 
 > Note: First request may take 30-50 seconds on free tier (cold start)
