@@ -16,10 +16,21 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from django.http import JsonResponse
 from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
+
+def home(request):
+    return JsonResponse({
+        "project": "Post Office Management API",
+        "status": "running",
+        "version": "v1",
+        "token": "/api/v1/token/",
+        "refresh": "/api/v1/token/refresh/"
+    })
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path("", home),
     path('api/v1/', include('booking.urls')),
     path('api/v1/', include('delivery.urls')),
     path('api/v1/token/', TokenObtainPairView.as_view()),
